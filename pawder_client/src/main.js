@@ -8,6 +8,7 @@ import router from './router'
 
 const app = createApp(App)
 
+axios.defaults.baseURL = 'http://pawder.api'
 app.use(createPinia())
 app.use(router)
 app.use(VueAxios, axios)

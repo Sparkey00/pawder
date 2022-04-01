@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TokenController;
 use App\Http\Controllers\AuthController;
 
-Route::post('/tokens/create', function (Request $request) {
-    $token = $request->user()->createToken($request->token_name);
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
 
-    return ['token' => $token->plainTextToken];
+Route::middleware('auth:sanctum')->group( function () {
+    Route::resource('products', \App\Http\Controllers\UserController::class);
 });
-Route::post('/sanctum/token', TokenController::class);

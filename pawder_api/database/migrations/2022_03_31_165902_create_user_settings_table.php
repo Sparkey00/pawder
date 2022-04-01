@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('user_settings', function (Blueprint $table) {
-            $table->id();
+            $table->id('user_id');
+            $table->integer('radius_meters');
+            $table->jsonb('pref_breeds');
+            $table->smallInteger('age_from');
+            $table->smallInteger('age_to');
             $table->timestamps();
         });
     }

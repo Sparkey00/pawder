@@ -13,9 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('chats', function (Blueprint $table) {
+        Schema::create('user_breeds', function (Blueprint $table) {
             $table->id();
-            $table->smallInteger('status');
+            $table->integer('user_id');
+            $table->integer('breed_id');
+
+            $table->index('user_id');
+            $table->index('breed_id');
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('breed_id')->references('id')->on('breeds');
             $table->timestamps();
         });
     }
@@ -27,6 +34,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chats');
+        Schema::dropIfExists('user_breeds');
+
     }
 };

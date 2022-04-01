@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('rictures', function (Blueprint $table) {
+        Schema::create('pictures', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->string('path');
+            $table->smallInteger('order');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rictures');
+        Schema::dropIfExists('pictures');
     }
 };

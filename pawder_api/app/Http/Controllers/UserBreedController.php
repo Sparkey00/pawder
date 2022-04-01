@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\chats;
+use App\Models\UserBreed;
 use Illuminate\Http\Request;
 
-class ChatsController extends Controller
+class UserBreedController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ChatsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\chats  $chats
+     * @param  \App\Models\UserBreed  $userBreed
      * @return \Illuminate\Http\Response
      */
-    public function show(chats $chats)
+    public function show(UserBreed $userBreed)
     {
         //
     }
@@ -52,10 +52,10 @@ class ChatsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\chats  $chats
+     * @param  \App\Models\UserBreed  $userBreed
      * @return \Illuminate\Http\Response
      */
-    public function edit(chats $chats)
+    public function edit(UserBreed $userBreed)
     {
         //
     }
@@ -64,10 +64,10 @@ class ChatsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\chats  $chats
+     * @param  \App\Models\UserBreed  $userBreed
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, chats $chats)
+    public function update(Request $request, UserBreed $userBreed)
     {
         //
     }
@@ -75,10 +75,10 @@ class ChatsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\chats  $chats
+     * @param  \App\Models\UserBreed  $userBreed
      * @return \Illuminate\Http\Response
      */
-    public function destroy(chats $chats)
+    public function destroy(UserBreed $userBreed)
     {
         //
     }

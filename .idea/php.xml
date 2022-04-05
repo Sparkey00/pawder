@@ -111,6 +111,7 @@
       <path value="$PROJECT_DIR$/pawder_api/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/pawder_api/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/pawder_api/vendor/composer" />
+      <path value="$PROJECT_DIR$/pawder_api/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
